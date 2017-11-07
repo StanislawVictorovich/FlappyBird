@@ -1,0 +1,184 @@
+#background{
+    width:144px;
+    height:255px;
+    position: absolute;
+    overflow: hidden;
+}
+.background_day{
+    background: url(../img/sprites.png) 0px 0px;
+}
+.background_night{
+    background: url(../img/sprites.png) -144px 0px;
+
+}
+#road{
+    width: 167px;
+    height: 56px;
+    background: url(../img/sprites.png) -292px 0px;
+    position: absolute;
+    bottom: 0;
+}
+#bird{
+    top: 50%;
+    left: 35px;
+    width: 18px;
+    height: 13px;    
+}
+.bird_fly_0{
+    background: url(../img/sprites.png) -115px -328px;
+    position: absolute;
+    bottom: 0;
+}
+.bird_fly_1{
+    background: url(../img/sprites.png) -87px -490px;
+    position: absolute;
+    bottom: 0;
+}
+.bird_fly_2{
+    background: url(../img/sprites.png) -115px -354px;
+    position: absolute;
+    bottom: 0;
+}
+.bird_crashed{
+    background: url(../img/sprites.png) -311px -91px;
+    position: absolute;
+    bottom: 0;
+}
+.pillar{
+    position: absolute;
+    width: 26px;
+    height: 161px;
+    right: -20px;
+}
+#pillar_up{
+    background: url(../img/sprites.png) -56px -323px;
+    top: -60px;
+}
+#pillar_down{
+    background: url(../img/sprites.png) -84px -323px;
+    top: 160px;
+}
+#table_result{
+    width: 117px;
+    height: 59px;
+    background: url(../img/sprites.png) -2px -258px;
+    position: absolute;
+    right: 10%;
+    top: 20%;  
+    display: none;
+}
+#score_x{
+    width: 12px;
+    height: 19px;  
+    position: absolute;
+    right: 50%;
+    top: 10%;  
+}
+#score_xx{
+    width: 12px;
+    height: 19px;  
+    position: absolute;
+    right: 60%;
+    top: 10%;  
+}
+.score_0{
+    background: url(../img/sprites.png) -495px -59px;
+}
+.score_1{
+    background: url(../img/sprites.png) -134px -454px;
+}
+.score_2{
+    background: url(../img/sprites.png) -291px -159px;
+}
+.score_3{
+    background: url(../img/sprites.png) -305px -159px;
+}
+.score_4{
+    background: url(../img/sprites.png) -319px -159px;
+}
+.score_5{
+    background: url(../img/sprites.png) -333px -159px;
+}
+.score_6{
+    background: url(../img/sprites.png) -291px -183px;
+}
+.score_7{
+    background: url(../img/sprites.png) -305px -183px;
+}
+.score_8{
+    background: url(../img/sprites.png) -319px -183px;
+}
+.score_9{
+    background: url(../img/sprites.png) -333px -183px;
+}
+#score_result_x{
+    width: 9px;
+    height: 12px;  
+    position: absolute;
+    right: 20%;
+    top: 27%;  
+    display: none;
+}
+#score_result_xx{
+    width: 9px;
+    height: 12px;  
+    position: absolute;
+    right: 26%;
+    top: 27%;  
+    display: none;
+}
+.score_result_0{
+    background: url(../img/sprites.png) -136px -305px;
+}
+.score_result_1{
+    background: url(../img/sprites.png) -136px -476px;
+}
+.score_result_2{
+    background: url(../img/sprites.png) -136px -488px;
+}
+.score_result_3{
+    background: url(../img/sprites.png) -130px -500px;
+}
+.score_result_4{
+    background: url(../img/sprites.png) -501px -0px;
+}
+.score_result_5{
+    background: url(../img/sprites.png) -501px -11px;
+}
+.score_result_6{
+    background: url(../img/sprites.png) -504px -25px;
+}
+.score_result_7{
+    background: url(../img/sprites.png) -504px -41px;
+}
+.score_result_8{
+    background: url(../img/sprites.png) -292px -241px;
+}
+.score_result_9{
+    background: url(../img/sprites.png) -310px -205px;
+}
+#game_over{
+    width: 100px;
+    height: 22px;
+    background: url(../img/sprites.png) -394px -58px;
+    position: absolute;
+    right: 20%;
+    top: 50%;
+    display: none;
+}
+#get_ready{
+    width: 100px;
+    height: 28px;
+    background: url(../img/sprites.png) -294px -58px;
+    position: absolute;
+    right: 15%;
+    top: 50%;
+}
+#ready_button{
+    width: 55px;
+    height: 31px;
+    background: url(../img/sprites.png) -352px -116px;
+    position: absolute;
+    right: 35%;
+    top: 60%;
+}

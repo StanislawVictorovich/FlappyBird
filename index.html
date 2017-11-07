@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>FlappyBird</title> 
+        <link rel='stylesheet' type='text/css' href='css/style.css'>
+        <script type='text/javascript' src='js/jquery-2.1.4.min.js'></script> 
+        <script type='text/javascript' src='js/flappybird.js'></script>
+    </head>
+    <body>
+        <div id='background' class='background_day'>    
+            <div id='road'></div>
+            <div id='bird'></div>
+            <div id='pillar_up' class='pillar'></div>
+            <div id='pillar_down' class='pillar'></div>
+            <div id='score_x' class="score_0"></div>
+            <div id='score_xx'></div>
+            <div id='get_ready'></div>
+            <div id='ready_button'></div>
+            <div id='game_over'></div>
+            <div id='table_result'></div>
+            <div id='score_result_x'></div>
+            <div id='score_result_xx'></div>
+        </div>  
+        <script type="text/javascript">
+            $('body').on('click','#background',function(){
+                birdPosition=BIRD_JUMP;
+            });
+            $('body').on('click','#ready_button',function(){
+                $('#get_ready').fadeOut('slow');
+                $('#ready_button').fadeOut('slow');
+                startGame=true; 
+            });
+        </script>
+    </body>
+</html>
