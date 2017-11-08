@@ -103,7 +103,7 @@ var checkCoordinates = function(bx,by,px,py) {
         }; 
     };
     if(by>strToIntCssAttribute('#background','height')-40){
-        return false;
+        return false; 
     };
     return true;
 };
