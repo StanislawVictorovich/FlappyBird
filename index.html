@@ -18,17 +18,47 @@
             <div id='ready_button'></div>
             <div id='game_over'></div>
             <div id='table_result'></div>
+            <div id='medal'></div>
+            <div id='game_new'></div>
             <div id='score_result_x'></div>
             <div id='score_result_xx'></div>
+            <div id='score_best_result_x'></div>
+            <div id='score_best_result_xx'></div>
         </div>  
         <script type="text/javascript">
             $('body').on('click','#background',function(){
                 birdPosition=BIRD_JUMP;
             });
             $('body').on('click','#ready_button',function(){
-                $('#get_ready').fadeOut('slow');
+                $('#get_ready').fadeIn('slow');
                 $('#ready_button').fadeOut('slow');
-                startGame=true; 
+                setTimeout(function(){
+                    $('#get_ready').fadeOut('slow');
+                    intervalGameStart = setInterval(run,TIMER);
+                },3000);
+                
+            });
+            $('body').on('click','#game_new',function(){
+                $('#score_x').removeClass();
+                $('#score_x').addClass('score_0');
+                $('#game_over').fadeToggle('slow');
+                $('#table_result').slideToggle('slow');
+                $('#score_result_x').removeClass();
+                $('#score_result_xx').removeClass();
+                $('#score_best_result_x').removeClass();
+                $('#score_best_result_xx').removeClass();
+                $('#medal').removeClass();
+                $('#background').removeClass('background_night').addClass('background_day');
+                $(this).fadeOut('slow');
+                $('#pillar_down').css('left','300px');
+                $('#pillar_up').css('left','300px');
+                $('#bird').removeClass('bird_crashed');
+                score = 0;
+                $('#get_ready').fadeIn('slow');
+                setTimeout(function(){
+                    $('#get_ready').fadeOut('slow');
+                    intervalGameStart = setInterval(run,TIMER);
+                },3000);
             });
         </script>
     </body>

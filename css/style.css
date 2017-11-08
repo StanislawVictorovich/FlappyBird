@@ -127,6 +127,22 @@
     top: 27%;  
     display: none;
 }
+#score_best_result_x{
+    width: 9px;
+    height: 12px;  
+    position: absolute;
+    right: 20%;
+    top: 35%;  
+    display: none;
+}
+#score_best_result_xx{
+    width: 9px;
+    height: 12px;  
+    position: absolute;
+    right: 26%;
+    top: 35%;  
+    display: none;
+}
 .score_result_0{
     background: url(../img/sprites.png) -136px -305px;
 }
@@ -157,6 +173,19 @@
 .score_result_9{
     background: url(../img/sprites.png) -310px -205px;
 }
+#medal{
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    right: 95px;
+    top: 73px;
+}
+.medal_gold{
+    background: url(../img/sprites.png) -111px -476px;
+}
+.medal_silver{
+    background: url(../img/sprites.png) -111px -452px;
+}
 #game_over{
     width: 100px;
     height: 22px;
@@ -173,6 +202,7 @@
     position: absolute;
     right: 15%;
     top: 50%;
+    display: none;
 }
 #ready_button{
     width: 55px;
@@ -181,4 +211,13 @@
     position: absolute;
     right: 35%;
     top: 60%;
+}
+#game_new{
+    width: 18px;
+    height: 8px;
+    background: url(../img/sprites.png) -110px -500px;
+    position: absolute;
+    right: 50%;
+    top: 45%;   
+    display: none;
 }

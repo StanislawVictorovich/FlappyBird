@@ -1,8 +1,8 @@
 var TIMER = 50;
 var BIRD_JUMP = 4;
-var startGame=false;
-var intervalID = 0;
+var intervalGameStart = 0;
 var score = 0;
+var bestScore = 0;
 var scoreFlag = false;
 
 var birdPosition;
@@ -11,18 +11,15 @@ var pillarUp;
 var pillarDown;
 
 var run = function () {
-    if(startGame) {
-        var rnd = Math.floor(Math.random()*30);
-        bird.pushUpBird();
-        pillarUp.movePillar(-60-rnd);
-        pillarDown.movePillar(strToIntCssAttribute('.pillar','height')-rnd); 
-        !checkCoordinates(bird.x,bird.y,pillarDown.x,pillarDown.y) ? bird.gameOver() : bird.fly(); 
-        shiftYOfObject("#bird",1);
-    }
+    var rnd = Math.floor(Math.random()*30);
+    bird.pushUpBird();
+    pillarUp.movePillar(-60-rnd);
+    pillarDown.movePillar(strToIntCssAttribute('.pillar','height')-rnd); 
+    !checkCoordinates(bird.x,bird.y,pillarDown.x,pillarDown.y) ? bird.gameOver() : bird.fly(); 
+    shiftYOfObject("#bird",1);
 };
 
 $(document).ready(function(){
-    intervalID = setInterval(run,TIMER); 
     bird = new FlappyBird('#bird');
     pillarUp = new Pillar("#pillar_up");
     pillarDown = new Pillar("#pillar_down");
@@ -44,15 +41,27 @@ function FlappyBird(selector){
         $('#road').css('left',-cycleCounter%12+'px');
     };
     this.gameOver = function(){
-        clearInterval(intervalID);
+        $('#medal').removeClass();
+        if(score>bestScore){
+            bestScore=score;
+            $('#medal').addClass('medal_gold').fadeIn('slow');
+        } else {
+            $('#medal').addClass('medal_silver').fadeIn('slow');
+        }
+        clearInterval(intervalGameStart);
         $(selector).toggleClass('bird_crashed');
-        $('#game_over').fadeIn('slow');
-        $('#table_result').fadeIn('slow');
+        $('#game_over').fadeToggle('slow');
+        $('#table_result').slideToggle('slow');
         $('#score_result_x').addClass('score_result_'+score%10).fadeIn('slow');
         if (score>=10){
             $('#score_result_xx').addClass('score_result_'+Math.floor(score/10)%10).fadeIn('slow');
         }
+        $('#score_best_result_x').addClass('score_result_'+bestScore%10).fadeIn('slow');
+        if (bestScore>=10){
+            $('#score_best_result_xx').addClass('score_result_'+Math.floor(bestScore/10)%10).fadeIn('slow');
+        }
         $('#background').toggleClass('background_night'); 
+        $('#game_new').fadeToggle('slow');
     };
 };
 
